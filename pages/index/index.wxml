@@ -1,27 +1,24 @@
-<!--index.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
-    </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
-    </view>
-  </view>
-</scroll-view>
+<!-- 
+	首页：校验用户是否有登录态（如果之前微信授权过，则无需加载本页面直接转到main页面） 
+	在Page生命周期的初始化时做登录校验，详情请看login函数
+-->
+
+<!-- 当前纵向页面布局：
+	(#id)margin-top:10%
+	(#title)margin:5%
+	(#desc)margin:10%
+-->
+<view style="text-align: center">
+	<image id="icon" src="/images/index/icon.png"></image>
+</view>
+
+<view id="title">
+	<text>智慧社区</text>
+</view>
+
+<view id="description">
+	<text>我是一行段落我是一行段落我是一行段落我是一行段落</text>我是一行段落我是一行段落
+</view>
+
+<button id="wx_login" bind:tap="wx_login">微信授权登录</button>
+<button id="tel_login" bind:tap="tel_login">手机号登录</button>
