@@ -1,1 +1,8 @@
 /* pages/main/main.wxss */
+.swiper_imgs {
+  width: 100%;
+}
+
+.announcement {
+  margin: 10px;
+}

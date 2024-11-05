@@ -1,3 +1,22 @@
 <!--pages/main/main.wxml-->
 <!-- 通过登录进入的主页面 -->
-<text>pages/main/main.wxml</text>
+<swiper interval="1500" autoplay>
+	<swiper-item wx:key="item" wx:for="{{images_list}}" wx:for-item="item">
+		<image class="swiper_imgs" src="{{item}}"></image>
+	</swiper-item>
+</swiper>
+
+<view class="announcement">
+	<text>🔈我是一个公告栏~~~~~~~</text>
+</view>
+
+<scroll-view>
+	<view style="display: flex;">
+		<view style="flex: 1;">
+			1
+		</view>
+		<view style="flex: 1;">
+			1
+		</view>
+	</view>
+</scroll-view>
