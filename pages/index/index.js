@@ -23,6 +23,8 @@ Page({
 				// console.log(res);
 				// 设置用户登录状态为 true
 				wx.setStorageSync("hasUserLogin", true);
+				wx.setStorageSync("userInfo", res.userInfo);
+
 				wx.reLaunch({
 					url: '/pages/main/main',
 				})
