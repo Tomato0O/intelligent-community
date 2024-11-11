@@ -1,12 +1,23 @@
 /* pages/mine/mine.wxss */
+page {
+  background-color: #eeee;
+}
+
 .userInfoContainer {
-  padding: 0 10%;
+  padding: 5% 10%;
   display: flex;
   flex-direction: row;
-  margin: 5% 5% 0 5%;
-	background-color: white;
-	border-radius: 10px;
-  /* background: linear-gradient(to bottom, skyblue, white); */
+  background-color: white;
+  border-radius: 10px;
+
+  /* 重叠线性渐变，详见：https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient */
+  background: repeating-linear-gradient(
+    to left,
+    #ffff 0px,
+    #ffff 10px,
+    #eeee 10px,
+    #eeee 20px
+  );
 }
 
 .avartarImage {
@@ -24,14 +35,24 @@
   justify-content: center;
 }
 
-page {
-  background-color: #eeee;
-}
-
-.middleware {
+/* 只负责这一大块的内容排版 */
+.serviceContainer {
+  display: flex;
+  flex-direction: row;
   text-align: center;
   margin: 2%;
-  /* border: 1px solid white; */
-  border-radius: 15px;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* 因为这一块所有子项class=serviceItems所以可以在这里批量设置 */
+.serviceItems {
+  flex-grow: 1;
+}
+
+.moreServices {
+  margin: 2%;
+  border-radius: 10px;
   background-color: white;
 }
