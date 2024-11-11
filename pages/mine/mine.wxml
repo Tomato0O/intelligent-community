@@ -1,9 +1,12 @@
 <!--pages/mine/mine.wxml-->
 <scroll-view>
-	<view class="userInfoContainer">
-		<image class="avartarImage" src="{{avatarUrl}}"></image>
-		<view class="nickName">
-			{{nickName}}
+	<view style="background-color: blue; padding: 2% 2% 0 2%;">
+		<view class="userInfoContainer">
+			<image class="avartarImage" src="{{avatarUrl}}"></image>
+			<view class="nickName" style="flex-direction: column;">
+				{{nickName}}
+				<text style="position: relative; bottom: -5%; font-size: medium; color: #888888;">智慧社区已陪伴您xxx天</text>
+			</view>
 		</view>
 	</view>
 
@@ -13,6 +16,7 @@
 		<view class="serviceItems" wx:key="orders" wx:for="{{serviceItemsList}}" bind:tap="{{item.tapMethod}}">
 			<image src="{{item.iconPath}}" style="width: 10vw; height: 10vh;"></image>
 			<view>{{item.serviceName}}</view>
+			<view class="msg" wx:if="{{1!=2}}">1</view>
 		</view>
 	</view>
 

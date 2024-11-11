@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 <!-- 通过登录进入的主页面 -->
-<swiper interval="1500" autoplay>
+<swiper interval="1500" autoplay indicator-dots>
 	<swiper-item wx:key="item" wx:for="{{images_list}}" wx:for-item="item">
 		<image class="swiper_imgs" src="{{item}}"></image>
 	</swiper-item>

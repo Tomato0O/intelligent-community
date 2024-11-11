@@ -38,24 +38,25 @@ Page({
 				"serviceName": "问题上报"
 			},
 			{
-				"iconPath": "/images/mine/checked.svg",
-				"serviceName": "已完成"
+				"iconPath": "/images/mine/menu.svg",
+				"serviceName": "信息公示"
 			},
 			{
-				"iconPath": "/images/mine/checked.svg",
-				"serviceName": "已完成"
+				"iconPath": "/images/mine/clock.svg",
+				"serviceName": "场地预约"
 			},
 			{
-				"iconPath": "/images/mine/checked.svg",
-				"serviceName": "已完成"
+				"iconPath": "/images/mine/mailbox.svg",
+				"serviceName": "社区活动"
 			},
 			{
-				"iconPath": "/images/mine/checked.svg",
-				"serviceName": "已完成"
+				"iconPath": "/images/mine/female.svg",
+				// 例如保洁、开锁等便民服务
+				"serviceName": "社区服务"
 			},
 			{
-				"iconPath": "/images/mine/checked.svg",
-				"serviceName": "已完成"
+				"iconPath": "/images/mine/sharing.svg",
+				"serviceName": "互助交流"
 			},
 			{
 				"iconPath": "/images/mine/setting.svg",
