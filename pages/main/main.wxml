@@ -12,10 +12,10 @@
 
 <scroll-view>
 	<view style="display: flex;">
-		<view style="flex: 1;">
+		<view style="flex-grow: 1;">
 			1
 		</view>
-		<view style="flex: 1;">
+		<view style="flex-grow: 1;">
 			1
 		</view>
 	</view>

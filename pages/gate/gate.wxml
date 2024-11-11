@@ -1,2 +1,10 @@
 <!--pages/gate/gate.wxml-->
-<text>pages/gate/gate.wxml</text>
+<view style="background-color: rgb(95, 95, 206); height: 100vh;">
+	<view class="title">
+		<text>尊敬的xxx业主，欢迎回家！</text>
+	</view>
+
+	<view class="qrcode-container">
+		<image class="qrcode" src="{{qrcodeUrl}}"></image>
+	</view>
+</view>

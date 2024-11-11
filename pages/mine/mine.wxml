@@ -1,7 +1,29 @@
 <!--pages/mine/mine.wxml-->
-<view class="userInfoView">
+<view class="userInfoContainer">
 	<image class="avartarImage" src="{{avatarUrl}}"></image>
 	<view class="nickName">
 		{{nickName}}
+	</view>
+</view>
+
+<!-- 物业服务进度查询：分为【已上报】、【已受理】、【已完成】、【历史上报】模块 -->
+<view class="ordersContainer">
+	123
+</view>
+
+<view class="middleware">
+	<view style="display: flex;flex-direction: row;">
+		<view class="mid_upper_items" wx:for="{{middlewareList}}" wx:key="middlewarekey" wx:for-index="idx" wx:key-item="item" wx:if="{{idx%2==0}}" style="flex: 1; ">
+			<!-- 预计做6~8个小工具，奇数项在上，偶数项在下（这里不是指数组索引，指的是img+btn的元素） -->
+			<image src="{{item.iconUrl}}" style="width: 10vw; height: 10vh;" bind:tap="{{item.tap}}"></image>
+			<view>{{item.text}}</view>
+		</view>
+	</view>
+
+	<view style="display: flex;flex-direction: row;">
+		<view class="mid_below_items" wx:for="{{middlewareList}}" wx:key="middlewarekey" wx:for-index="idx" wx:key-item="item" wx:if="{{idx%2==1}}" style="flex: 1;">
+			<image src="{{item.iconUrl}}" style="width: 10vw; height: 10vh;"></image>
+			<view>{{item.text}}</view>
+		</view>
 	</view>
 </view>

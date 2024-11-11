@@ -1,12 +1,35 @@
 // pages/mine/mine.js
 Page({
-
+	msg(){
+		console.log(1);
+	},
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
 		nickName: "",
-		avatarUrl: ""
+		avatarUrl: "",
+		middlewareList: [{
+			// 在线svg图标库：https://iconpark.oceanengine.com/official，测试页面布局用
+			"iconUrl": "/images/mine/mail.svg",
+			"text": "我的消息",
+			"tap":"msg"
+		}, {
+			"iconUrl": "/images/mine/setting.svg",
+			"text": "个人资料"
+		}, {
+			"iconUrl": "/images/mine/edit.svg",
+			"text": "个人资料"
+		}, {
+			"iconUrl": "/images/mine/documents.svg",
+			"text": "jqk"
+		}, {
+			"iconUrl": "/images/mine/check.svg",
+			"text": "check"
+		}, {
+			"iconUrl": "/images/mine/aiming.svg",
+			"text": "jqk"
+		}, ],
 	},
 
 	/**

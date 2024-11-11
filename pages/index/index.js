@@ -25,6 +25,10 @@ Page({
 				wx.setStorageSync("hasUserLogin", true);
 				wx.setStorageSync("userInfo", res.userInfo);
 
+				wx.request({
+					url: 'url',
+				})
+
 				wx.reLaunch({
 					url: '/pages/main/main',
 				})
