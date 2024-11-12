@@ -1,5 +1,10 @@
 // pages/mine/mine.js
 Page({
+	service() {
+		wx.navigateTo({
+			url: '/pages/service/service',
+		})
+	},
 	/**
 	 * 页面的初始数据
 	 */
@@ -9,22 +14,23 @@ Page({
 		// 中间的【物业服务】模块
 		serviceItemsList: [{
 				// tapMethod:点击模块后跳转到什么方法
-				"tapMethod": "pending",
+				// "tapMethod": "pending",
+				"tapMethod": "service",
 				"iconPath": "/images/mine/searching.svg",
 				"serviceName": "待处理"
 			},
 			{
-				"tapMethod": "",
+				"tapMethod": "service",
 				"iconPath": "/images/mine/restart.svg",
 				"serviceName": "处理中"
 			},
 			{
-				"tapMethod": "",
+				"tapMethod": "service",
 				"iconPath": "/images/mine/checked.svg",
 				"serviceName": "已完成"
 			},
 			{
-				"tapMethod": "",
+				"tapMethod": "service",
 				"iconPath": "/images/mine/documents.svg",
 				"serviceName": "全部"
 			},

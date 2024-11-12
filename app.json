@@ -4,7 +4,8 @@
 		"pages/logs/logs",
 		"pages/main/main",
 		"pages/mine/mine",
-		"pages/gate/gate"
+		"pages/gate/gate",
+		"pages/service/service"
 	],
 	"window": {
 		"navigationBarTextStyle": "black",
