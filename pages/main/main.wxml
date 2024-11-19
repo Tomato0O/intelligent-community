@@ -1,22 +1,51 @@
 <!--pages/main/main.wxml-->
 <!-- 通过登录进入的主页面 -->
 <swiper interval="1500" autoplay indicator-dots>
-	<swiper-item wx:key="item" wx:for="{{images_list}}" wx:for-item="item">
-		<image class="swiper_imgs" src="{{item}}"></image>
-	</swiper-item>
+  <swiper-item wx:key="item" wx:for="{{images_list}}" wx:for-item="item">
+    <image class="swiper_imgs" src="{{item}}"></image>
+  </swiper-item>
 </swiper>
 
 <view class="announcement">
-	<text>🔈我是一个公告栏~~~~~~~</text>
+  <text>🔈我是一个公告栏~~~~~~~</text>
 </view>
 
+<view class="content">
+  <view class="service - center">
+    <text class="title">党群服务中心</text>
+    <text>大有文园社区党群服务中心</text>
+    <text>凌水街道</text>
+    <text>负责人: 马媛媛</text>
+    <text>服务时间: 8:30 - - 17:00</text>
+  </view>
+  <view class="activity - section">
+    <text class="section - title">活动</text>
+
+    <view class="activity - list">
+      <text class="no - activity">暂无活动</text>
+    </view>
+  </view>
+
+
+
+
+
+  <view class="activity - tabs">
+    <text class="tab active">进行中活动</text>
+    <text class="tab">已结束活动</text>
+    <text class="more">更多</text>
+  </view>
+</view>
+
+
+
 <scroll-view>
-	<view style="display: flex;">
-		<view style="flex-grow: 1;">
-			1
-		</view>
-		<view style="flex-grow: 1;">
-			1
-		</view>
-	</view>
+  <view style="display: flex;">
+    <view style="flex-grow: 1;">
+
+    </view>
+    <view style="flex-grow: 1;">
+
+    </view>
+  </view>
 </scroll-view>

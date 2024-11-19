@@ -1,1 +1,106 @@
 /* pages/service/service.wxss */
+
+page{
+  background-color: #eeeeee;
+}
+
+.button-container button {
+  display: inline-block; /* 或者使用 inline */
+  margin: 10px; /* 设置按钮之间的间距 */
+  padding: 10px 20px;  /* 设置按钮的内边距 */
+  background-color: #4CAF50; /* 按钮背景颜色 */
+  color: white;  /* 按钮文字颜色 */
+  border: none;  /* 去掉按钮的边框 */
+  border-radius: 5px;  /* 设置圆角 */
+  cursor: pointer;  /* 鼠标悬停时显示为可点击 */
+  font-size: 14px;  /* 设置字体大小 */
+
+}
+
+.container {
+  padding: 20px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}
+
+
+/* ai特效部分 */
+.orders-page {
+  padding: 20rpx;
+}
+
+.page-header {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.order-list {
+  margin-top: 20rpx;
+}
+
+.order-item {
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.order-info {
+  margin-bottom: 10rpx;
+}
+
+.order-number {
+  font-weight: bold;
+}
+
+.order-time {
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.order-status {
+  color: #f00;
+  margin-bottom: 10rpx;
+}
+
+.order-goods {
+  margin-bottom: 10rpx;
+}
+
+.order-action button {
+  margin-right: 10rpx;
+}
+

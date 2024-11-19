@@ -1,2 +1,48 @@
 <!--pages/service/service.wxml-->
-<text>pages/service/service.wxml</text>
+<!-- 搜索栏 -->
+<view class="search-container">
+  <input type="text" placeholder="搜索..." bindinput="onSearchInput" value="{{searchTerm}}" />
+  <button bindtap="onSearchClick" class="search-btn">搜索</button>
+</view>
+
+
+<view class="button-container" style="display: flex;">
+  <button style="flex-grow: 1;">待处理</button>
+  <button style="flex-grow: 1;">处理中</button>
+  <button style="flex-grow: 1;">已完成</button>
+  <button style="flex-grow: 1;">全部</button>
+</view>
+
+<!-- ai豆包 -->
+
+
+<view class="orders-page">
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <text>我的事件</text>
+  </view>
+  <!-- 订单列表，使用循环来展示每个订单 -->
+  <view class="order-list">
+    <block wx:for="{{orderList}}" wx:key="index">
+      <view class="order-item">
+        <view class="order-info">
+          <text class="order-number">事件编号：{{item.orderNumber}}</text>
+          <text class="order-time">订单时间：{{item.orderTime}}</text>
+        </view>
+        <view class="order-status">
+          <text>{{getStatusText(item.orderStatus)}}</text>
+        </view>
+        <view class="order-goods">
+          <text>昵称：{{item.goodsName}}</text>
+          <text>事件：{{item.goodsQuantity}}</text>
+        </view>
+        <view class="order-action">
+          <button bindtap="goToOrderDetail" data-order-id="{{item.orderId}}">查看详情</button>
+          <button bindtap="cancelOrder" data-order-id="{{item.orderId}}" wx:if="{{item.orderStatus === '待支付'}}">取消订单</button>
+          <button bindtap="confirmReceipt" data-order-id="{{item.orderId}}" wx:if="{{item.orderStatus === '已发货'}}">确认收货</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
