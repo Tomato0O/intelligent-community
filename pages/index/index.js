@@ -17,7 +17,6 @@ Page({
   },
 
   wx_login() {
-    console.log(1);
     wx.login({
       success: (res) => {
         console.log(res)

@@ -1,0 +1,25 @@
+<!--pages/settings/settings.wxml-->
+<form bindsubmit="catchsubmit">
+	<view class="item">
+		<view class="left">头像</view>
+		<view>
+			<button open-type="chooseAvatar" bindchooseavatar="getAvatar" style=" margin: 0;padding: 0;width: 64px;height: 64px;">
+				<image src="{{avatarUrl}}" style="object-fit: contain; width: 64px; height: 64px;"></image>
+			</button>
+		</view>
+	</view>
+
+	<view class="item">
+		<view class="left">昵称</view>
+		<input name="nickname" class="right" type="nickname" confirm-type="go" />
+	</view>
+
+	<view class="item">
+		<view class="left">出生年月</view>
+		<picker name="date" mode="date" bindchange="changeBirth">{{birth}}</picker>
+	</view>
+
+	<button type="primary" form-type="submit">保存</button>
+
+
+</form>

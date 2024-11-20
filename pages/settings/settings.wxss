@@ -1,0 +1,21 @@
+/* pages/settings/settings.wxss */
+page {
+  background-color: #eeeeee;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 3%;
+  padding: 3%;
+  background-color: #ffffff;
+}
+
+.item .left {
+  flex: 1;
+}
+
+.item .right {
+  text-align: right;
+}

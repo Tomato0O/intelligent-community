@@ -21,10 +21,15 @@
 	</view>
 
 	<!-- 更多服务 -->
-	<view class="moreServices" wx:key="moreServices" wx:for="{{moreServicesList}}" bind:tap="{{item.tapMethod}}">
+	<view class="moreServices" wx:key="moreServices" wx:for="{{moreServicesList}}" bind:tap="goToSomePages" data-pagepath="{{item.pagePath}}">
 		<view style="display: flex;flex-direction: row;align-items: center;padding: 3%;">
 			<image src="{{item.iconPath}}" style="width: 5vh; height: 5vh;"></image>
 			<view style="padding-left: 8%;">{{item.serviceName}}</view>
 		</view>
+	</view>
+
+	<!-- 退出登录 -->
+	<view style="color: blue;text-align: center; margin: 5%;">
+		<text bind:tap="logout">退出登录</text>
 	</view>
 </scroll-view>

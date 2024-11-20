@@ -42,7 +42,7 @@ page {
   width: 20px;
   background-color: red;
   color: white;
-  border-radius: 20px;
+  border-radius: 50%;
 }
 
 /* 只负责这一大块的内容排版 */

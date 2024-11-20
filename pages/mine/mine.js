@@ -1,9 +1,10 @@
 // pages/mine/mine.js
 Page({
-	service() {
+	goToSomePages: function (event) {
+		const pagePath = event.currentTarget.dataset.pagepath;
 		wx.navigateTo({
-			url: '/pages/service/service',
-		})
+			url: pagePath
+		});
 	},
 	/**
 	 * 页面的初始数据
@@ -39,10 +40,10 @@ Page({
 				"iconPath": "/images/mine/messaging.svg",
 				"serviceName": "我的消息"
 			},
-			{
-				"iconPath": "/images/mine/ideal.svg",
-				"serviceName": "问题上报"
-			},
+			// {
+			// 	"iconPath": "/images/mine/ideal.svg",
+			// 	"serviceName": "问题上报"
+			// },
 			{
 				"iconPath": "/images/mine/menu.svg",
 				"serviceName": "信息公示"
@@ -62,11 +63,13 @@ Page({
 			},
 			{
 				"iconPath": "/images/mine/sharing.svg",
-				"serviceName": "互助交流"
+				"serviceName": "互助交流",
+				"pagePath": "/pages/sharing/sharing"
 			},
 			{
 				"iconPath": "/images/mine/setting.svg",
-				"serviceName": "个人设置"
+				"serviceName": "个人设置",
+				"pagePath": "/pages/settings/settings"
 			},
 		]
 	},
