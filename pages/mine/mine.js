@@ -6,6 +6,11 @@ Page({
 			url: pagePath
 		});
 	},
+	service() {
+		wx.navigateTo({
+			url: '/pages/service/service',
+		})
+	},
 	/**
 	 * 页面的初始数据
 	 */
